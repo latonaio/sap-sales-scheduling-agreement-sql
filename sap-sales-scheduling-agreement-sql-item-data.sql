@@ -1,7 +1,7 @@
 CREATE TABLE `sap-sales-scheduling-agreement-item-data`
 (
-  `SalesSchedulingAgreement`         varchar(10) DEFAULT NULL,
-  `SalesSchedulingAgreementItem`     varchar(6) DEFAULT NULL,
+  `SalesSchedulingAgreement`         varchar(10) NOT NULL,
+  `SalesSchedulingAgreementItem`     varchar(6) NOT NULL,
   `SalesSchedgAgrmtItemCategory`     varchar(4) DEFAULT NULL,
   `LastChangeDate`                   date DEFAULT NULL,
   `Material`                         varchar(40) DEFAULT NULL,
@@ -35,6 +35,6 @@ CREATE TABLE `sap-sales-scheduling-agreement-item-data`
   `ItemBillingIncompletionStatus`    varchar(1) DEFAULT NULL,
   `ItemDeliveryIncompletionStatus`   varchar(1) DEFAULT NULL,
   PRIMARY KEY (`SalesSchedulingAgreement`, `SalesSchedulingAgreementItem`),
-  CONSTRAINT `SalesSchedulingAgreement_fk` FOREIGN KEY (`SalesSchedulingAgreement`) REFERENCES `sap-sales-scheduling-agreement-data` (`SchedulingAgreement`)
+  CONSTRAINT `SalesSchedulingAgreement_fk` FOREIGN KEY (`SalesSchedulingAgreement`) REFERENCES `sap-sales-scheduling-agreement-header-data` (`SchedulingAgreement`)
 ) ENGINE = InnoDB
 DEFAULT CHARSET = utf8mb4;

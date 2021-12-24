@@ -1,6 +1,6 @@
 CREATE TABLE `sap-sales-scheduling-agreement-header-data`
 (
-  `SalesSchedulingAgreement`     varchar(10) DEFAULT NULL,
+  `SalesSchedulingAgreement`     varchar(10) NOT NULL,
   `SalesSchedgAgrmtType`         varchar(4) DEFAULT NULL,
   `CreationDate`                 date DEFAULT NULL,
   `LastChangeDate`               date DEFAULT NULL,

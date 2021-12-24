@@ -1,8 +1,8 @@
 CREATE TABLE `sap-sales-scheduling-agreement-schedule-line-data`
 (
-  `SalesSchedulingAgreement`        varchar(10) DEFAULT NULL,
-  `SalesSchedulingAgreementItem`    varchar(6) DEFAULT NULL,
-  `ScheduleLine`                    varchar(10) DEFAULT NULL,
+  `SalesSchedulingAgreement`        varchar(10) NOT NULL,
+  `SalesSchedulingAgreementItem`    varchar(6) NOT NULL,
+  `ScheduleLine`                    varchar(10) NOT NULL,
   `SchedulingAgreementReleaseType`  varchar(1) DEFAULT NULL,
   `ScheduleLineCategory`            varchar(2) DEFAULT NULL,
   `OrderQuantityUnit`               varchar(3) DEFAULT NULL,

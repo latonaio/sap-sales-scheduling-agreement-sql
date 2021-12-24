@@ -1,9 +1,9 @@
 CREATE TABLE `sap-sales-scheduling-agreement-pricing-element-data`
 (
-  `SalesSchedulingAgreement`       varchar(10) DEFAULT NULL,
-  `SalesSchedulingAgreementItem`   varchar(6) DEFAULT NULL,
-  `PricingProcedureStep`           varchar(3) DEFAULT NULL,
-  `PricingProcedureCounter`        varchar(3) DEFAULT NULL,
+  `SalesSchedulingAgreement`       varchar(10) NOT NULL,
+  `SalesSchedulingAgreementItem`   varchar(6) NOT NULL,
+  `PricingProcedureStep`           varchar(3) NOT NULL,
+  `PricingProcedureCounter`        varchar(3) NOT NULL,
   `ConditionApplication`           varchar(2) DEFAULT NULL,
   `ConditionType`                  varchar(4) DEFAULT NULL,
   `PricingDateTime`                datetime DEFAULT NULL,

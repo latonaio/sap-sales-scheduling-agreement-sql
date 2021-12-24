@@ -1,8 +1,8 @@
 CREATE TABLE `sap-sales-scheduling-agreement-delivery-schedule-data`
 (
-  `SalesSchedulingAgreement`          varchar(10) DEFAULT NULL,
-  `SalesSchedulingAgreementItem`      varchar(6) DEFAULT NULL,
-  `IntDeliveryScheduleNumber`         varchar(4) DEFAULT NULL,
+  `SalesSchedulingAgreement`          varchar(10) NOT NULL,
+  `SalesSchedulingAgreementItem`      varchar(6) NOT NULL,
+  `IntDeliveryScheduleNumber`         varchar(4) NOT NULL,
   `SchedulingAgreementReleaseType`    varchar(1) DEFAULT NULL,
   `DeliveryScheduleStartDate`         date DEFAULT NULL,
   `DeliveryScheduleEndDate`           date DEFAULT NULL,
