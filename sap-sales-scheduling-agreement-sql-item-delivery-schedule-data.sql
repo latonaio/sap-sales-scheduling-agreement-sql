@@ -1,25 +1,25 @@
-CREATE TABLE `sap-sales-scheduling-agreement-delivery-schedule-data`
+CREATE TABLE `sap_sales_scheduling_agreement_item_delivery_schedule_data`
 (
   `SalesSchedulingAgreement`          varchar(10) NOT NULL,
   `SalesSchedulingAgreementItem`      varchar(6) NOT NULL,
   `IntDeliveryScheduleNumber`         varchar(4) NOT NULL,
   `SchedulingAgreementReleaseType`    varchar(1) DEFAULT NULL,
-  `DeliveryScheduleStartDate`         date DEFAULT NULL,
-  `DeliveryScheduleEndDate`           date DEFAULT NULL,
+  `DeliveryScheduleStartDate`         varchar(80) DEFAULT NULL,
+  `DeliveryScheduleEndDate`           varchar(80) DEFAULT NULL,
   `CustomerDeliveryScheduleNumber`    varchar(17) DEFAULT NULL,
-  `DeliveryScheduleDate`              date DEFAULT NULL,
-  `LastDeliveryDocPostingDate`        date DEFAULT NULL,
+  `DeliveryScheduleDate`              varchar(80) DEFAULT NULL,
+  `LastDeliveryDocPostingDate`        varchar(80) DEFAULT NULL,
   `LastDeliveryDocument`              varchar(10) DEFAULT NULL,
   `LastIntDeliveryScheduleNumber`     varchar(4) DEFAULT NULL,
-  `CreationDate`                      date DEFAULT NULL,
-  `DeliveryScheduleCreationDate`      date DEFAULT NULL,
+  `CreationDate`                      varchar(80) DEFAULT NULL,
+  `DeliveryScheduleCreationDate`      varchar(80) DEFAULT NULL,
   `LastReceiptQuantity`               varchar(15) DEFAULT NULL,
   `CumulativeReceiptQuantity`         varchar(17) DEFAULT NULL,
   `CumulativeIssuedQuantity`          varchar(17) DEFAULT NULL,
   `CumulativeDeliveredQuantity`       varchar(17) DEFAULT NULL,
   `OrderQuantityUnit`                 varchar(3) DEFAULT NULL,
-  `LastChangeDate`                    date DEFAULT NULL,
+  `LastChangeDate`                    varchar(80) DEFAULT NULL,
   PRIMARY KEY (`SalesSchedulingAgreement`, `SalesSchedulingAgreementItem`, `IntDeliveryScheduleNumber`),
-  CONSTRAINT `SalesSchedulingAgreement_fk` FOREIGN KEY (`SalesSchedulingAgreement`) REFERENCES `sap-sales-scheduling-agreement-header-data` (`SalesSchedulingAgreement`)
+  CONSTRAINT `SAPSalesSchedulingAgreementItemDeliveryScheduleData_fk` FOREIGN KEY (`SalesSchedulingAgreement`) REFERENCES `sap_sales_scheduling_agreement_header_data` (`SalesSchedulingAgreement`)
 ) ENGINE = InnoDB
 DEFAULT CHARSET = utf8mb4;

@@ -1,9 +1,9 @@
-CREATE TABLE `sap-sales-scheduling-agreement-item-data`
+CREATE TABLE `sap_sales_scheduling_agreement_item_data`
 (
   `SalesSchedulingAgreement`         varchar(10) NOT NULL,
   `SalesSchedulingAgreementItem`     varchar(6) NOT NULL,
   `SalesSchedgAgrmtItemCategory`     varchar(4) DEFAULT NULL,
-  `LastChangeDate`                   date DEFAULT NULL,
+  `LastChangeDate`                   varchar(80) DEFAULT NULL,
   `Material`                         varchar(40) DEFAULT NULL,
   `MaterialByCustomer`               varchar(35) DEFAULT NULL,
   `MaterialGroup`                    varchar(9) DEFAULT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE `sap-sales-scheduling-agreement-item-data`
   `NetPriceQuantity`                 varchar(6) DEFAULT NULL,
   `NetPriceQuantityUnit`             varchar(3) DEFAULT NULL,
   `TransactionCurrency`              varchar(5) DEFAULT NULL,
-  `PricingDate`                      date DEFAULT NULL,
+  `PricingDate`                      varchar(80) DEFAULT NULL,
   `ShippingPoint`                    varchar(4) DEFAULT NULL,
   `ShippingType`                     varchar(2) DEFAULT NULL,
   `DeliveryPriority`                 varchar(2) DEFAULT NULL,
@@ -35,6 +35,6 @@ CREATE TABLE `sap-sales-scheduling-agreement-item-data`
   `ItemBillingIncompletionStatus`    varchar(1) DEFAULT NULL,
   `ItemDeliveryIncompletionStatus`   varchar(1) DEFAULT NULL,
   PRIMARY KEY (`SalesSchedulingAgreement`, `SalesSchedulingAgreementItem`),
-  CONSTRAINT `SalesSchedulingAgreement_fk` FOREIGN KEY (`SalesSchedulingAgreement`) REFERENCES `sap-sales-scheduling-agreement-header-data` (`SchedulingAgreement`)
+  CONSTRAINT `SAPSalesSchedulingAgreementItemData_fk` FOREIGN KEY (`SalesSchedulingAgreement`) REFERENCES `sap_sales_scheduling_agreement_header_data` (`SchedulingAgreement`)
 ) ENGINE = InnoDB
 DEFAULT CHARSET = utf8mb4;

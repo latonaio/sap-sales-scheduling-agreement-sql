@@ -1,4 +1,4 @@
-CREATE TABLE `sap-sales-scheduling-agreement-pricing-element-data`
+CREATE TABLE `sap_sales_scheduling_agreement_item_pricing_element_data`
 (
   `SalesSchedulingAgreement`       varchar(10) NOT NULL,
   `SalesSchedulingAgreementItem`   varchar(6) NOT NULL,
@@ -6,7 +6,7 @@ CREATE TABLE `sap-sales-scheduling-agreement-pricing-element-data`
   `PricingProcedureCounter`        varchar(3) NOT NULL,
   `ConditionApplication`           varchar(2) DEFAULT NULL,
   `ConditionType`                  varchar(4) DEFAULT NULL,
-  `PricingDateTime`                datetime DEFAULT NULL,
+  `PricingDateTime`                varchar(80) DEFAULT NULL,
   `ConditionCalculationType`       varchar(3) DEFAULT NULL,
   `ConditionBaseValue`             varchar(13) DEFAULT NULL,
   `ConditionRateValue`             varchar(13) DEFAULT NULL,
@@ -26,6 +26,6 @@ CREATE TABLE `sap-sales-scheduling-agreement-pricing-element-data`
   `ConditionScaleBasisCurrency`    varchar(5) DEFAULT NULL,
   `ConditionIsManuallyChanged`     tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`SalesSchedulingAgreement`, `SalesSchedulingAgreementItem`, `PricingProcedureStep`, `PricingProcedureCounter`),
-  CONSTRAINT `SalesSchedulingAgreement_fk` FOREIGN KEY (`SalesSchedulingAgreement`) REFERENCES `sap-sales-scheduling-agreement-header-data` (`SalesSchedulingAgreement`)
+  CONSTRAINT `SASPSalesSchedulingAgreementItemPricingElementData_fk` FOREIGN KEY (`SalesSchedulingAgreement`) REFERENCES `sap_sales_scheduling_agreement_header_data` (`SalesSchedulingAgreement`)
 ) ENGINE = InnoDB
 DEFAULT CHARSET = utf8mb4;
