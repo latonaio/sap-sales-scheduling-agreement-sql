@@ -35,6 +35,6 @@ CREATE TABLE `sap_sales_scheduling_agreement_item_data`
   `ItemBillingIncompletionStatus`    varchar(1) DEFAULT NULL,
   `ItemDeliveryIncompletionStatus`   varchar(1) DEFAULT NULL,
   PRIMARY KEY (`SalesSchedulingAgreement`, `SalesSchedulingAgreementItem`),
-  CONSTRAINT `SAPSalesSchedulingAgreementItemData_fk` FOREIGN KEY (`SalesSchedulingAgreement`) REFERENCES `sap_sales_scheduling_agreement_header_data` (`SchedulingAgreement`)
+  CONSTRAINT `SAPSalesSchedulingAgreementItemData_fk` FOREIGN KEY (`SalesSchedulingAgreement`) REFERENCES `sap_sales_scheduling_agreement_header_data` (`SalesSchedulingAgreement`)
 ) ENGINE = InnoDB
 DEFAULT CHARSET = utf8mb4;

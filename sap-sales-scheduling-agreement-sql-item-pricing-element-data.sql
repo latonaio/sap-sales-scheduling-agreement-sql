@@ -8,7 +8,7 @@ CREATE TABLE `sap_sales_scheduling_agreement_item_pricing_element_data`
   `ConditionType`                  varchar(4) DEFAULT NULL,
   `PricingDateTime`                varchar(80) DEFAULT NULL,
   `ConditionCalculationType`       varchar(3) DEFAULT NULL,
-  `ConditionBaseValue`             varchar(13) DEFAULT NULL,
+  `ConditionBaseValue`             varchar(16) DEFAULT NULL,
   `ConditionRateValue`             varchar(13) DEFAULT NULL,
   `ConditionCurrency`              varchar(5) DEFAULT NULL,
   `ConditionQuantity`              varchar(6) DEFAULT NULL,
